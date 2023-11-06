@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #3f4834;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: "DM Sans", sans-serif;
+}
+
+h3 {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.hasna-avatar {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.hasna-profile h1 {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.hasna-profile h2 {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.hasna-profile p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.hasna-section-header {
+    padding-top: 20px;
+}
+
+.hasna-container {
+    width: 90%;
+    max-width: 700px;
+    background-color: #3f4834;
+    padding: 20px 10px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.hasna-link-box {
+    display: block;
+    width: 100%;
+    max-width: 540px;
+    height: 30px;
+    background-color: #fff;
+    color: #8F8F8F;
+    text-decoration: none;
+    padding: 12px 5px 12px 60px;
+    margin: 10px auto;
+    line-height: 30px;
+    transition: background-color 0.3s;
+    position: relative;
+    text-align: center;
+}
+
+.hasna-link-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hasna-link-box:hover {
+    background-color: #3f4834;
+    border: 2px solid #fff;
+    color: #ffffff;
+}
+

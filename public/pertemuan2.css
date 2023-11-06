@@ -1,0 +1,24 @@
+h3 {
+    color: rgb(200, 100, 200);
+}
+
+body {
+    background-color: rgb(50, 90, 150);
+}
+
+h1 {
+    color: aquamarine;
+}
+
+a:link {
+    color: burlywood;
+}
+
+a:visited {
+    color: greenyellow;
+}
+
+img {
+    width: 300px;
+    border-radius: 60%;
+}
