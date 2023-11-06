@@ -29,7 +29,22 @@ Route::get('/blog', function () {
     return view('blog');
 });
 
+Route::get('/p1', function () {
+    return view('p1');
+});
+
+Route::get('/p2', function () {
+    return view('p2');
+});
+
+Route::get('/p3', function () {
+    return view('p3');
+});
+
 Route::get('/ets', function () {
     return view('ets');
 });
 
+Route::get('perkalian', 'App\Http\Controllers\MahasiswaA@index');
+
+Route::get('show', 'App\Http\Controllers\MahasiswaA@showBlog');
