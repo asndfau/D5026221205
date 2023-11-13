@@ -25,7 +25,7 @@ Route::get('halo2', function () {
 	return "<h1> Halo, Selamat datang di tutorial laravel www.malasngoding.com </h1>";
 });
 
-Route::get('/blog', function () {
+Route::get('/blog2', function () {
     return view('blog');
 });
 
@@ -48,3 +48,17 @@ Route::get('/ets', function () {
 Route::get('perkalian', 'App\Http\Controllers\MahasiswaA@index');
 
 Route::get('show', 'App\Http\Controllers\MahasiswaA@showBlog');
+
+Route::get('/pegawai/{nama}', 'App\Http\Controllers\MahasiswaA@showNama');
+
+//membuka form
+Route::get('/formulir', 'App\Http\Controllers\MahasiswaA@formulir');
+
+//memproses view
+Route::post('/formulir/proses', 'App\Http\Controllers\MahasiswaA@proses');
+
+Route::get('/blog', 'App\Http\Controllers\BlogController@home');
+
+Route::get('/blog/tentang', 'App\Http\Controllers\BlogController@tentang');
+
+Route::get('/blog/kontak', 'App\Http\Controllers\BlogController@kontak');

@@ -20,4 +20,19 @@ class MahasiswaA extends Controller
         return view('blog', ['nama' => $nama, 'alamat' => $alamat, 'umur' => $umur]);
 
     }
+
+    public function showNama($nama){
+        return "Anda telah mengisikan:" . $nama;
+    }
+
+    public function formulir(){
+        //cek soal hak ases
+    	return view('formulir');
+    }
+
+    public function proses(Request $request){
+        $nama = $request->input('nama');
+     	$alamat = $request->input('alamat');
+        return "Nama : ".$nama.", Alamat : ".$alamat;
+    }
 }
