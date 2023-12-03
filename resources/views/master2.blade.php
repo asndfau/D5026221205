@@ -17,7 +17,7 @@
 </head>
 
 <body>
-<div class="container">
+
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <!-- Brand -->
         <a class="navbar-brand" href="#">Hasna Daffa Ulinnuha - 5026221205</a>
@@ -48,25 +48,16 @@
 	<br/>
 	<br/>
 
+	<div class="container">
 	<!-- bagian judul halaman blog -->
-	@yield('judul_halaman')
-
-{{--
-    @yield('header')
-    @yield('isihalaman') --}}
+	    @yield('judul_halaman')
 
     <!-- bagian konten blog -->
-	@yield('konten')
+        @yield('konten')
+    </div>
 
-
-	<br/>
-	<br/>
-	<hr/>
-	<footer>
-		<p>&copy; <a href="https://www.malasngoding.com">www.malasngoding.com</a>. 2018 - 2019</p>
-	</footer>
-</div>
-
+    @include('footer')
+    
 </body>
 
 </html>
