@@ -28,7 +28,13 @@
 		<tr>
 			<td>{{ $p->pegawai_nama }}</td>
 			<td>{{ $p->pegawai_jabatan }}</td>
-			<td>{{ $p->pegawai_umur }}</td>
+			<td
+            @if ($p->pegawai_umur <= 30)
+            class="bg-dark text-light"
+            @elseif ($p->pegawai_umur >= 31)
+            class="bg-danger text-light"
+            @endif
+            >{{ $p->pegawai_umur }}</td>
 			<td>{{ $p->pegawai_alamat }}</td>
 			<td>
                 <a href="/pegawai/lihat/{{ $p->pegawai_id }}" class="btn btn-success">View</a>
