@@ -1,4 +1,4 @@
-@extends('master2')
+{{-- @extends('master2')
 @section('title', 'Database Nilai')
 
 @section('judul_halaman')
@@ -38,4 +38,4 @@
 	</table>
 @endsection
 
-
+ --}}

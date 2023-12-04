@@ -82,3 +82,8 @@ Route::get('/pegawai/lihat/{id}','App\Http\Controllers\PegawaiController@viewPeg
 
 //nilaiKuliah CRUd
 Route::get('/nilaiKuliah','App\Http\Controllers\nilaiKuliahController@indexpraeas');
+
+//Nilai
+Route::get('/nilai','App\Http\Controllers\NilaiController@index');
+Route::get('/nilai/add','App\Http\Controllers\NilaiController@tambah');
+Route::post('/nilai/store','App\Http\Controllers\NilaiController@store');
