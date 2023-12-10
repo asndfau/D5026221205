@@ -1,4 +1,4 @@
-{{-- @extends('master2')
+@extends('master2')
 @section('title', 'Database Pegawai')
 
 @section('judul_halaman')
@@ -48,9 +48,9 @@
 	</table>
     {{ $pegawai->links()}}
 @endsection
- --}}
 
- @extends('master2')
+
+ {{-- @extends('master2')
 @section('judulhalaman', 'Data Nilai')
 
 @section('konten')
@@ -94,4 +94,4 @@
         @endforeach
     </table>
 
-@endsection
+@endsection --}}

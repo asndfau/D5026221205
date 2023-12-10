@@ -38,7 +38,7 @@
             </a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="/pegawai">Pegawai</a>
-              <a class="dropdown-item" href="#">Link 2</a>
+              <a class="dropdown-item" href="/sepatu">Sepatu</a>
               <a class="dropdown-item" href="#">Link 3</a>
             </div>
           </li>
@@ -57,7 +57,7 @@
     </div>
 
     @include('footer')
-    
+
 </body>
 
 </html>
