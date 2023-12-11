@@ -19,25 +19,6 @@ class KaryawanController extends Controller
 
     }
 
-    public function convertToLowercase($string) {
-        $lowercaseString = strtolower($string);
-        return $lowercaseString;
-    }
-
-    public function convertToUppercase($string) {
-        $uppercaseString = strtoupper($string);
-        return $uppercaseString;
-    }
-
-    // public function viewsepatu($id)
-    // {
-    //     // mengambil data karyawan berdasarkan id yang dipilih
-    //     $karyawan = DB::table('karyawan')->where('kodesepatu',$id)->get();
-    //     // passing data karyawan yang didapat ke view edit.blade.php
-    //     return view('lihatSepatu',['karyawan' => $karyawan]);
-
-    // }
-
     // method untuk menampilkan view form tambah karyawan
     public function tambah()
     {
@@ -50,41 +31,22 @@ class KaryawanController extends Controller
     // method untuk insert data ke table karyawan
     public function store(Request $request)
     {
+        $request->validate([
+            'kodepegawai' => 'required|unique:karyawan',
+        ]);
+
         // insert data ke table karyawan
         DB::table('karyawan')->insert([
-            'kodepegawai' => $request->kode,
+            'kodepegawai' => $request->kodepegawai,
             'namalengkap' => $request->nama,
             'divisi' => $request->divisi,
             'departemen' => $request->departemen
         ]);
         // alihkan halaman ke halaman karyawan
-        return redirect('/karyawan');
+
+        return redirect('/karyawan')->with('success', 'Data berhasil disimpan!');
 
     }
-
-    // // method untuk edit data karyawan
-    // public function edit($id)
-    // {
-    //     // mengambil data karyawan berdasarkan id yang dipilih
-    //     $karyawan = DB::table('karyawan')->where('kodesepatu',$id)->get();
-    //     // passing data karyawan yang didapat ke view edit.blade.php
-    //     return view('edit',['karyawan' => $karyawan]);
-
-    // }
-
-    // // update data karyawan
-    // public function update(Request $request)
-    // {
-    //     // update data karyawan
-    //     DB::table('karyawan')->where('kodesepatu',$request->id)->update([
-    //         'kodepegawai' => $request->kode,
-    //         'namalengkap' => $request->nama,
-    //         'divisi' => $request->divisi,
-    //         'departemen' => $request->departemen
-    //     ]);
-    //     // alihkan halaman ke halaman karyawan
-    //     return redirect('/karyawan');
-    // }
 
     // method untuk hapus data karyawan
     public function hapus($id)
@@ -96,20 +58,6 @@ class KaryawanController extends Controller
         return redirect('/karyawan');
     }
 
-    // public function cari(Request $request)
-	// {
-	// 	// menangkap data pencarian
-	// 	$cari = $request->cari;
-
-    // 		// mengambil data dari table karyawan sesuai pencarian data
-	// 	$karyawan = DB::table('karyawan')
-	// 	->where('kodepegawai','like',"%".$cari."%")
-	// 	->paginate();
-
-    // 		// mengirim data karyawan ke view index
-	// 	return view('index',['karyawan' => $karyawan]);
-
-	// }
 }
 
 

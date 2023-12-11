@@ -541,6 +541,7 @@
                 <a href="http://127.0.0.1:8000/p6">Pertemuan 6</a> <br>
                 <a href="http://127.0.0.1:8000/p7">Pertemuan 7</a> <br>
                 <a href="http://127.0.0.1:8000/ets">ets-Linktree</a> <br>
+                <a href="http://127.0.0.1:8000/karyawan">EAS Kode Soal DD</a> <br>
             </div>
         </div>
     </div>

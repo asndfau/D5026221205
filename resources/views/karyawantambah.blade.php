@@ -5,16 +5,16 @@
 
     <a href="/karyawan"> Kembali</a>
 
-    <br/>
-    <br/>
+    <br />
+    <br />
 
     <form action="/karyawan/store" method="post" class="form-horizontal">
         {{ csrf_field() }}
 
         <div class="form-group row">
-            <label for="kode" class="col-sm-2 control-label">Kode Pegawai </label>
+            <label for="kodepegawai" class="col-sm-2 control-label">Kode Pegawai </label>
             <div class="col-sm-8">
-                <input type="text" name="kode" class="form-control" id="kode" placeholder="Masukkan Kode Pegawai">
+                <input type="text" name="kodepegawai" class="form-control" id="kodepegawai" placeholder="Masukkan Kode Pegawai">
             </div>
         </div>
 
@@ -35,7 +35,8 @@
         <div class="form-group row">
             <label for="departemen" class="col-sm-2 control-label">Departemen </label>
             <div class="col-sm-8">
-                <input type="text" name="divisi" class="form-control" id="departemen" placeholder="Masukkan Departemen">
+                <input type="text" name="departemen" class="form-control" id="departemen"
+                    placeholder="Masukkan Departemen">
             </div>
         </div>
 
@@ -45,5 +46,15 @@
             </div>
         </div>
     </form>
+
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
 @endsection

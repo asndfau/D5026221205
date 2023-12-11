@@ -18,20 +18,18 @@
     <br>
     <table class="table table-striped table-hover">
         <tr>
-            <th>Kode Sepatu</th>
-            <th>Merk Sepatu</th>
-            <th>Stock Sepatu</th>
-            <th>Ketersediaan</th>
-            <th>Opsi</th>
+            <th>Kode Pegawai</th>
+            <th>Nama Lengkap</th>
+            <th>Divisi</th>
+            <th>Departemen</th>
+            <th>Delete</th>
         </tr>
-        @foreach ($sepatu as $p)
+        @foreach ($karyawan as $p)
             <tr>
                 <td>{{ $p->kodepegawai }}</td>
-                <td>{{ convertToUppercase($p->namalengkap)}}</td>
+                <td>{{ strtoupper($p->namalengkap) }}</td>
                 <td>{{ $p->divisi}}</td>
-                <td>{{ convertToLowercase($p->departemen) }}</td>
-                <td>
-                    <input class="form-check-input" type="checkbox" value="" {{ $p->tersedia === 'Y' ? 'checked' : '' }} id="flexCheckDefault"></td>
+                <td>{{ strtolower($p->departemen) }}</td>
                 <td>
                     <a href="/karyawan/hapus/{{ $p->kodepegawai }}" class="btn btn-danger">Hapus Data</a>
                 </td>
@@ -39,5 +37,5 @@
         @endforeach
     </table>
 
-    <a href="/karyawan/tambah/{{ $p->kodepegawai }}" class="btn btn-primary">Tambah Data</a>
+    <a href="/karyawan/tambah/" class="btn btn-primary">Tambah Data</a>
 @endsection
