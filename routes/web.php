@@ -105,3 +105,20 @@ Route::get('/sepatu/cari','App\Http\Controllers\SepatuController@cari');
 
 Route::get('/sepatu/lihat/{id}','App\Http\Controllers\SepatuController@viewsepatu');
 
+//EAS
+Route::get('/karyawan','App\Http\Controllers\KaryawanController@index');
+
+Route::get('/karyawan/tambah','App\Http\Controllers\KaryawanController@tambah');
+
+Route::post('/karyawan/store','App\Http\Controllers\KaryawanController@store');
+
+// Route::get('/karyawan/edit/{id}','App\Http\Controllers\KaryawanController@edit');
+
+// Route::post('/karyawan/update','App\Http\Controllers\KaryawanController@update');
+
+Route::get('/karyawan/hapus/{id}','App\Http\Controllers\KaryawanController@hapus');
+
+// Route::get('/karyawan/cari','App\Http\Controllers\KaryawanController@cari');
+
+// Route::get('/karyawan/lihat/{id}','App\Http\Controllers\KaryawanController@viewsepatu');
+

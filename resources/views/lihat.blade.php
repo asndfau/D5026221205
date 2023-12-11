@@ -42,7 +42,7 @@
                     </div>
                 </div>
 
-                <a href="/pegawai" class="btn btn-primary">OK</a>
+                <a href="/librarian" class="btn btn-primary">OK</a>
             </form>
           </div>
         </div>
